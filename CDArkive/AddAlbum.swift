@@ -22,7 +22,7 @@ struct AddAlbum: View {
     @State private var title = ""
     
     let formats = ["CD", "SACD", "Blu-Spec CD", "DVD Audio", "Vinyl", "Cassette", "Minidisc", "Reel"]
-    let genres = ["Rock", "Hip Hop", "Jazz", "Classical", "Opera", "American Songbook", "Metal", "Pop", "J-Pop", "Folk", "Electro", "Comedy"]
+    let genres = ["Rock", "Hip Hop", "Jazz", "Classical", "Opera", "American Songbook", "Metal", "Pop", "J-Pop", "Folk", "Electro", "Emo", "Comedy"]
     let languages = ["English", "Afrikaans", "German", "Dutch", "Japanese", "Mandarin", "Polish", "Italian"]
     
     var body: some View {

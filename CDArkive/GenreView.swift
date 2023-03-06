@@ -34,6 +34,8 @@ struct GenreView: View {
             return Text("🪕")
         case "Electro":
             return Text("🤖")
+        case "Emo":
+            return Text("🥺")
         default:
             return Text("🎭")
         }
