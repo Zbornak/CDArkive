@@ -39,9 +39,14 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteAlbums)
             }
             .navigationTitle("CDArkive")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         showingAddAlbumScreen.toggle()

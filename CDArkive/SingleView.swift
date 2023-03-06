@@ -38,9 +38,14 @@ struct SingleView: View {
                         }
                     }
                 }
+                .onDelete(perform: deleteSingles)
             }
                 .navigationTitle("CDArkive")
                 .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
+                    }
+                    
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             showingAddSingleScreen.toggle()
