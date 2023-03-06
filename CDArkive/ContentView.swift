@@ -55,6 +55,15 @@ struct ContentView: View {
             }
         }
     }
+    
+    func deleteAlbums(at offsets: IndexSet) {
+        for offset in offsets {
+            let album = albums[offset]
+            moc.delete(album)
+        }
+        
+        try? moc.save()
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

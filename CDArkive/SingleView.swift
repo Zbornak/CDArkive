@@ -54,6 +54,15 @@ struct SingleView: View {
                 }
         }
     }
+    
+    func deleteSingles(at offsets: IndexSet) {
+        for offset in offsets {
+            let single = singles[offset]
+            moc.delete(single)
+        }
+        
+        try? moc.save()
+    }
 }
 
 struct SingleView_Previews: PreviewProvider {
