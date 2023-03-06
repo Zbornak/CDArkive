@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SingleView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(sortDescriptors: []) var singles: FetchedResults<Single>
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.artist)]) var singles: FetchedResults<Single>
     
     @State private var showingAddSingleScreen = false
     
