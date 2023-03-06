@@ -18,7 +18,7 @@ struct SingleView: View {
             List {
                 ForEach(singles) { single in
                     NavigationLink {
-                        Text(single.title ?? "Unknown")
+                        SingleDetailView(single: single)
                     } label: {
                         HStack {
                             EmojiRatingView(rating: single.rating)
