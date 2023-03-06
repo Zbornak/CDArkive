@@ -20,11 +20,56 @@ struct AddCD: View {
     @State private var title = ""
     
     let formats = ["CD", "SACD", "Blu-Spec CD", "DVD Audio", "Vinyl", "Cassette", "Minidisc", "Reel"]
-    let genres = ["Rock", "Hip Hop", "Jazz", "Classical", "Opera", "American Songbook", "Metal", "Pop", "J-Pop", "Folk", "Electro"]
+    let genres = ["Rock", "Hip Hop", "Jazz", "Classical", "Opera", "American Songbook", "Metal", "Pop", "J-Pop", "Folk", "Electro", "Comedy"]
     let languages = ["English", "Afrikaans", "German", "Dutch", "Japanese", "Mandarin", "Polish"]
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Form {
+                Section {
+                    TextField("Album title", text: $title)
+                    TextField("Artist name", text: $artist)
+                    
+                    Picker("Genre", selection: $genre) {
+                        ForEach(genres, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                }
+                
+                Section {
+                    TextEditor(text: $notes)
+                    
+                    Picker("Rating", selection: $rating) {
+                        ForEach(1..<6) {
+                            Text(String($0))
+                        }
+                    }
+                } header: {
+                    Text("Notes")
+                }
+                
+                Section {
+                    Picker("Language", selection: $language) {
+                        ForEach(languages, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    
+                    Picker("Format", selection: $format) {
+                        ForEach(formats, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                }
+                
+                Section {
+                    Button("Save") {
+                        //add CD
+                    }
+                }
+            }
+        }
     }
 }
 
