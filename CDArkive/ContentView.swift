@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
+    
     @FetchRequest(sortDescriptors: []) var albums: FetchedResults<Album>
     
     @State private var showingAddAlbumScreen = false

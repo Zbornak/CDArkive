@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AddSingle: View {
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
     
     @State private var artist = ""
     @State private var format = "CD"
@@ -77,6 +78,7 @@ struct AddSingle: View {
                         newSingle.title = title
                         
                         try? moc.save()
+                        dismiss()
                     }
                 }
             }
