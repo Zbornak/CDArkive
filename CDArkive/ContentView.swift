@@ -14,13 +14,22 @@ struct ContentView: View {
     @State private var showingAddAlbumScreen = false
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            Text("Count: \(albums.count)")
+                .navigationTitle("CDArkive")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showingAddAlbumScreen.toggle()
+                        } label: {
+                            Label("Add album", systemImage: "plus")
+                        }
+                    }
+                }
+                .sheet(isPresented: $showingAddAlbumScreen) {
+                    AddAlbum()
+                }
         }
-        .padding()
     }
 }
 

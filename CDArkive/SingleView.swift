@@ -14,7 +14,22 @@ struct SingleView: View {
     @State private var showingAddSingleScreen = false
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Text("Count: \(singles.count)")
+                .navigationTitle("CDArkive")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showingAddSingleScreen.toggle()
+                        } label: {
+                            Label("Add single", systemImage: "plus")
+                        }
+                    }
+                }
+                .sheet(isPresented: $showingAddSingleScreen) {
+                    AddSingle()
+                }
+        }
     }
 }
 
