@@ -66,7 +66,17 @@ struct AddSingle: View {
                 
                 Section {
                     Button("Save") {
-                        //add CD
+                        let newSingle = Single(context: moc)
+                        newSingle.id = UUID()
+                        newSingle.artist = artist
+                        newSingle.format = format
+                        newSingle.genre = genre
+                        newSingle.language = language
+                        newSingle.notes = notes
+                        newSingle.rating = Int16(rating)
+                        newSingle.title = title
+                        
+                        try? moc.save()
                     }
                 }
             }

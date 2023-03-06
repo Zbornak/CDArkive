@@ -66,7 +66,17 @@ struct AddAlbum: View {
                 
                 Section {
                     Button("Save") {
-                        //add CD
+                        let newAlbum = Album(context: moc)
+                        newAlbum.id = UUID()
+                        newAlbum.artist = artist
+                        newAlbum.format = format
+                        newAlbum.genre = genre
+                        newAlbum.language = language
+                        newAlbum.notes = notes
+                        newAlbum.rating = Int16(rating)
+                        newAlbum.title = title
+                        
+                        try? moc.save()
                     }
                 }
             }
