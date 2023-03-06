@@ -11,7 +11,7 @@ struct AddCD: View {
     @Environment(\.managedObjectContext) var moc
     
     @State private var artist = ""
-    @State private var format = ""
+    @State private var format = "CD"
     @State private var genre = "Rock"
     @State private var id = UUID()
     @State private var language = "English"
@@ -19,7 +19,8 @@ struct AddCD: View {
     @State private var rating = 3
     @State private var title = ""
     
-    let genres = ["Rock", "Hip Hop", "Jazz", "Classical", "Opera", "American Songbook", "Metal", "Pop", "J-Pop", "Folk"]
+    let formats = ["CD", "SACD", "Blu-Spec CD", "DVD Audio", "Vinyl", "Cassette", "Minidisc", "Reel"]
+    let genres = ["Rock", "Hip Hop", "Jazz", "Classical", "Opera", "American Songbook", "Metal", "Pop", "J-Pop", "Folk", "Electro"]
     let languages = ["English", "Afrikaans", "German", "Dutch", "Japanese", "Mandarin", "Polish"]
     
     var body: some View {
