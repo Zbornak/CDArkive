@@ -13,6 +13,7 @@
 		192CE31F29B5F0B70099E0C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192CE31E29B5F0B70099E0C4 /* Preview Assets.xcassets */; };
 		192CE32729B5F5AD0099E0C4 /* CDArkive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 192CE32529B5F5AD0099E0C4 /* CDArkive.xcdatamodeld */; };
 		192CE32929B5F61C0099E0C4 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CE32829B5F61C0099E0C4 /* DataController.swift */; };
+		192CE32B29B5F9D00099E0C4 /* AddCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CE32A29B5F9D00099E0C4 /* AddCD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		192CE31E29B5F0B70099E0C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		192CE32629B5F5AD0099E0C4 /* CDArkive.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CDArkive.xcdatamodel; sourceTree = "<group>"; };
 		192CE32829B5F61C0099E0C4 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		192CE32A29B5F9D00099E0C4 /* AddCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				192CE31929B5F0B60099E0C4 /* ContentView.swift */,
 				192CE32829B5F61C0099E0C4 /* DataController.swift */,
 				192CE32529B5F5AD0099E0C4 /* CDArkive.xcdatamodeld */,
+				192CE32A29B5F9D00099E0C4 /* AddCD.swift */,
 				192CE31B29B5F0B70099E0C4 /* Assets.xcassets */,
 				192CE31D29B5F0B70099E0C4 /* Preview Content */,
 			);
@@ -145,6 +148,7 @@
 			files = (
 				192CE31A29B5F0B60099E0C4 /* ContentView.swift in Sources */,
 				192CE32929B5F61C0099E0C4 /* DataController.swift in Sources */,
+				192CE32B29B5F9D00099E0C4 /* AddCD.swift in Sources */,
 				192CE31829B5F0B60099E0C4 /* CDArkiveApp.swift in Sources */,
 				192CE32729B5F5AD0099E0C4 /* CDArkive.xcdatamodeld in Sources */,
 			);
