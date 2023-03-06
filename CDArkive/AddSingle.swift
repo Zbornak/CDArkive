@@ -29,7 +29,7 @@ struct AddSingle: View {
         NavigationView {
             Form {
                 Section {
-                    TextField("Album title", text: $title)
+                    TextField("Single title", text: $title)
                     TextField("Artist name", text: $artist)
                     
                     Picker("Genre", selection: $genre) {

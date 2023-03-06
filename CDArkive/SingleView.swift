@@ -15,7 +15,25 @@ struct SingleView: View {
     
     var body: some View {
         NavigationView {
-            Text("Count: \(singles.count)")
+            List {
+                ForEach(singles) { single in
+                    NavigationLink {
+                        Text(single.title ?? "Unknown")
+                    } label: {
+                        HStack {
+                            EmojiRatingView(rating: single.rating)
+                                .font(.largeTitle)
+                            
+                            VStack(alignment: .leading) {
+                                Text(single.title ?? "Unknown title")
+                                    .font(.headline)
+                                Text(single.artist ?? "Unknown artist")
+                                    .foregroundColor(.secondary)
+                            }
+                        }
+                    }
+                }
+            }
                 .navigationTitle("CDArkive")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
