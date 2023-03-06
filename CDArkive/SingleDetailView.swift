@@ -44,7 +44,7 @@ struct SingleDetailView: View {
                 RatingView(rating: .constant(Int(single.rating)))
                     .font(.title)
                 EmojiRatingView(rating: single.rating)
-                    .font(.title)
+                    .font(.largeTitle)
             }
             
             HStack {
