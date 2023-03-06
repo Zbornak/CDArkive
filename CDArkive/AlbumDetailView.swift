@@ -10,6 +10,11 @@ import SwiftUI
 struct AlbumDetailView: View {
     let album: Album
     
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
+    
+    @State private var showingAlbumDeleteAlert = false
+    
     var body: some View {
         ScrollView {
             ZStack(alignment: .bottomTrailing) {

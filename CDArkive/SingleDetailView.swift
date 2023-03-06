@@ -10,6 +10,11 @@ import SwiftUI
 struct SingleDetailView: View {
     let single: Single
     
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
+    
+    @State private var showingSingleDeleteAlert = false
+    
     var body: some View {
         ScrollView {
             ZStack(alignment: .bottomTrailing) {
