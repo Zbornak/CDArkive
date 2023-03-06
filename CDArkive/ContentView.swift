@@ -16,20 +16,38 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            Text("Count: \(albums.count)")
-                .navigationTitle("CDArkive")
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            showingAddAlbumScreen.toggle()
-                        } label: {
-                            Label("Add album", systemImage: "plus")
+            List {
+                ForEach(albums) { album in
+                    NavigationLink {
+                        Text(album.title ?? "Unknown")
+                    } label: {
+                        HStack {
+                            EmojiRatingView(rating: album.rating)
+                                .font(.largeTitle)
+                            
+                            VStack(alignment: .leading) {
+                                Text(album.title ?? "Unknown title")
+                                    .font(.headline)
+                                Text(album.artist ?? "Unknown artist")
+                                    .foregroundColor(.secondary)
+                            }
                         }
                     }
                 }
-                .sheet(isPresented: $showingAddAlbumScreen) {
-                    AddAlbum()
+            }
+            .navigationTitle("CDArkive")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showingAddAlbumScreen.toggle()
+                    } label: {
+                        Label("Add album", systemImage: "plus")
+                    }
                 }
+            }
+            .sheet(isPresented: $showingAddAlbumScreen) {
+                AddAlbum()
+            }
         }
     }
 }

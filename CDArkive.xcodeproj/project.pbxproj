@@ -17,6 +17,7 @@
 		192CE32D29B602500099E0C4 /* AddSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CE32C29B602500099E0C4 /* AddSingle.swift */; };
 		197ECE6329B6069D003C265C /* SingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE6229B6069D003C265C /* SingleView.swift */; };
 		197ECE6729B61825003C265C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE6629B61825003C265C /* RatingView.swift */; };
+		197ECE6929B61ED0003C265C /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE6829B61ED0003C265C /* EmojiRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		192CE32C29B602500099E0C4 /* AddSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSingle.swift; sourceTree = "<group>"; };
 		197ECE6229B6069D003C265C /* SingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleView.swift; sourceTree = "<group>"; };
 		197ECE6629B61825003C265C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		197ECE6829B61ED0003C265C /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				192CE31929B5F0B60099E0C4 /* ContentView.swift */,
 				197ECE6229B6069D003C265C /* SingleView.swift */,
 				197ECE6629B61825003C265C /* RatingView.swift */,
+				197ECE6829B61ED0003C265C /* EmojiRatingView.swift */,
 				192CE32829B5F61C0099E0C4 /* DataController.swift */,
 				192CE32529B5F5AD0099E0C4 /* CDArkive.xcdatamodeld */,
 				192CE32A29B5F9D00099E0C4 /* AddAlbum.swift */,
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				192CE31A29B5F0B60099E0C4 /* ContentView.swift in Sources */,
+				197ECE6929B61ED0003C265C /* EmojiRatingView.swift in Sources */,
 				192CE32929B5F61C0099E0C4 /* DataController.swift in Sources */,
 				192CE32B29B5F9D00099E0C4 /* AddAlbum.swift in Sources */,
 				197ECE6729B61825003C265C /* RatingView.swift in Sources */,
