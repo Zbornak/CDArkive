@@ -14,7 +14,10 @@ struct RatingView: View {
     var maximumRating = 5
     
     var offImage: Image?
-    var onImage = Image(systemName: "music.mic.circle.fill")
+    var onImage = Image(systemName: "music.mic.circle")
+    
+    var offColor = Color.gray
+    var onColor = Color.yellow
     
     
     var body: some View {
@@ -23,8 +26,9 @@ struct RatingView: View {
                 Text(label)
             }
             
-            ForEach(1..<maximumRating - 1, id: \.self) { number in
+            ForEach(1..<maximumRating + 1, id: \.self) { number in
                 image(for: number)
+                    .foregroundColor(number > rating ? offColor: onColor)
                     .onTapGesture {
                         rating = number
                     }
