@@ -22,7 +22,7 @@ struct ContentView: View {
                         AlbumDetailView(album: album)
                     } label: {
                         HStack {
-                            EmojiRatingView(rating: album.rating)
+                            GenreView(genre: album.genre ?? "Unknown genre")
                                 .font(.largeTitle)
                             
                             VStack(alignment: .leading) {
@@ -33,8 +33,6 @@ struct ContentView: View {
                                     Text(album.artist ?? "Unknown artist")
                                         .foregroundColor(.secondary)
                                     
-                                    GenreView(genre: album.genre ?? "Unknown genre")
-                                    LanguageView(language: album.language ?? "Unknown language")
                                     FormatView(format: album.format ?? "Unknown format")
                                 }
                             }

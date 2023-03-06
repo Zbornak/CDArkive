@@ -21,7 +21,7 @@ struct SingleView: View {
                         SingleDetailView(single: single)
                     } label: {
                         HStack {
-                            EmojiRatingView(rating: single.rating)
+                            GenreView(genre: single.genre ?? "Unknown genre")
                                 .font(.largeTitle)
                             
                             VStack(alignment: .leading) {
@@ -32,8 +32,6 @@ struct SingleView: View {
                                     Text(single.artist ?? "Unknown artist")
                                         .foregroundColor(.secondary)
                                     
-                                    GenreView(genre: single.genre ?? "Unknown genre")
-                                    LanguageView(language: single.language ?? "Unknown language")
                                     FormatView(format: single.format ?? "Unknown format")
                                 }
                             }
