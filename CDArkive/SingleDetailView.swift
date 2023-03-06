@@ -64,7 +64,14 @@ struct SingleDetailView: View {
             Button("Delete", role: .destructive, action: deleteSingle)
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("Are you sure?")
+            Text("Are you sure you want to delete this single?")
+        }
+        .toolbar {
+            Button {
+                showingSingleDeleteAlert = true
+            } label: {
+                Label("Delete this single", systemImage: "trash")
+            }
         }
     }
     

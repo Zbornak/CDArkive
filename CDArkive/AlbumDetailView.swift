@@ -64,7 +64,14 @@ struct AlbumDetailView: View {
             Button("Delete", role: .destructive, action: deleteAlbum)
             Button("Cancel", role: .cancel) {}
         } message: {
-            Text("Are you sure?")
+            Text("Are you sure you want to delete this album?")
+        }
+        .toolbar {
+            Button {
+                showingAlbumDeleteAlert = true
+            } label: {
+                Label("Delete this album", systemImage: "trash")
+            }
         }
     }
     
