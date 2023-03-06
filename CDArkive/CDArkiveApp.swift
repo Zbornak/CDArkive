@@ -13,8 +13,19 @@ struct CDArkiveApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
+            TabView {
+                ContentView()
+                    .environment(\.managedObjectContext, dataController.container.viewContext)
+                    .tabItem {
+                        Label("Albums", systemImage: "music.quarternote.3")
+                    }
+                
+                SingleView()
+                    .environment(\.managedObjectContext, dataController.container.viewContext)
+                    .tabItem {
+                        Label("Singles", systemImage: "music.note")
+                    }
+            }
         }
     }
 }
