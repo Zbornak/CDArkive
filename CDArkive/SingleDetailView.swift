@@ -40,8 +40,12 @@ struct SingleDetailView: View {
             Text(single.notes ?? "No notes")
                 .padding()
             
-            RatingView(rating: .constant(Int(single.rating)))
-                .font(.largeTitle)
+            HStack {
+                RatingView(rating: .constant(Int(single.rating)))
+                    .font(.title)
+                EmojiRatingView(rating: single.rating)
+                    .font(.title)
+            }
             
             HStack {
                 FormatView(format: single.format ?? "")

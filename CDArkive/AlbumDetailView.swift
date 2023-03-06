@@ -40,8 +40,12 @@ struct AlbumDetailView: View {
             Text(album.notes ?? "No notes")
                 .padding()
             
-            RatingView(rating: .constant(Int(album.rating)))
-                .font(.largeTitle)
+            HStack {
+                RatingView(rating: .constant(Int(album.rating)))
+                    .font(.title)
+                EmojiRatingView(rating: album.rating)
+                    .font(.title)
+            }
             
             HStack {
                 FormatView(format: album.format ?? "")
