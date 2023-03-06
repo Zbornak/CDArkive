@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var albums: FetchedResults<Album>
+    
+    @State private var showingAddAlbumScreen = false
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
