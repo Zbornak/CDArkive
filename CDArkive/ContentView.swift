@@ -28,8 +28,15 @@ struct ContentView: View {
                             VStack(alignment: .leading) {
                                 Text(album.title ?? "Unknown title")
                                     .font(.headline)
-                                Text(album.artist ?? "Unknown artist")
-                                    .foregroundColor(.secondary)
+                                
+                                HStack {
+                                    Text(album.artist ?? "Unknown artist")
+                                        .foregroundColor(.secondary)
+                                    
+                                    GenreView(genre: album.genre ?? "Unknown genre")
+                                    LanguageView(language: album.language ?? "Unknown language")
+                                    FormatView(format: album.format ?? "Unknown format")
+                                }
                             }
                         }
                     }

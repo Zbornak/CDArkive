@@ -27,8 +27,15 @@ struct SingleView: View {
                             VStack(alignment: .leading) {
                                 Text(single.title ?? "Unknown title")
                                     .font(.headline)
-                                Text(single.artist ?? "Unknown artist")
-                                    .foregroundColor(.secondary)
+                                
+                                HStack {
+                                    Text(single.artist ?? "Unknown artist")
+                                        .foregroundColor(.secondary)
+                                    
+                                    GenreView(genre: single.genre ?? "Unknown genre")
+                                    LanguageView(language: single.language ?? "Unknown language")
+                                    FormatView(format: single.format ?? "Unknown format")
+                                }
                             }
                         }
                     }
