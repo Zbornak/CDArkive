@@ -41,12 +41,7 @@ struct AddSingle: View {
                 
                 Section {
                     TextEditor(text: $notes)
-                    
-                    Picker("Rating", selection: $rating) {
-                        ForEach(1..<6) {
-                            Text(String($0))
-                        }
-                    }
+                    RatingView(rating: $rating)
                 } header: {
                     Text("Notes")
                 }
