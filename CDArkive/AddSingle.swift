@@ -22,7 +22,7 @@ struct AddSingle: View {
     
     let formats = ["CD", "SACD", "Blu-Spec CD", "DVD Audio", "Vinyl", "Cassette", "Minidisc", "Reel"]
     let genres = ["Rock", "Hip Hop", "Jazz", "Classical", "Opera", "American Songbook", "Metal", "Pop", "J-Pop", "Folk", "Electro", "Comedy"]
-    let languages = ["English", "Afrikaans", "German", "Dutch", "Japanese", "Mandarin", "Polish"]
+    let languages = ["English", "Afrikaans", "German", "Dutch", "Japanese", "Mandarin", "Polish", "Italian"]
     
     var body: some View {
         NavigationView {
