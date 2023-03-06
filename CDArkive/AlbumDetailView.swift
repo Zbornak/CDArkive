@@ -29,6 +29,7 @@ struct AlbumDetailView: View {
             
             Text(album.artist ?? "Unkown artist")
                 .font(.title)
+                .fontWeight(.bold)
                 .foregroundColor(.secondary)
             
             Text(album.notes ?? "No notes")
@@ -37,7 +38,16 @@ struct AlbumDetailView: View {
             RatingView(rating: .constant(Int(album.rating)))
                 .font(.largeTitle)
             
-            
+            HStack {
+                FormatView(format: album.format ?? "")
+                Text(album.format ?? "Unknown format")
+            }
+            .padding(.top)
+                
+            HStack {
+                LanguageView(language: album.language ?? "")
+                Text(album.language ?? "Unknown language")
+            }
         }
         .navigationTitle(album.title ?? "Unknown album")
         .navigationBarTitleDisplayMode(.inline)

@@ -29,6 +29,7 @@ struct SingleDetailView: View {
             
             Text(single.artist ?? "Unkown artist")
                 .font(.title)
+                .fontWeight(.bold)
                 .foregroundColor(.secondary)
             
             Text(single.notes ?? "No notes")
@@ -37,7 +38,16 @@ struct SingleDetailView: View {
             RatingView(rating: .constant(Int(single.rating)))
                 .font(.largeTitle)
             
-            
+            HStack {
+                FormatView(format: single.format ?? "")
+                Text(single.format ?? "Unknown format")
+            }
+            .padding(.top)
+                
+            HStack {
+                LanguageView(language: single.language ?? "")
+                Text(single.language ?? "Unknown language")
+            }
         }
         .navigationTitle(single.title ?? "Unknown album")
         .navigationBarTitleDisplayMode(.inline)
