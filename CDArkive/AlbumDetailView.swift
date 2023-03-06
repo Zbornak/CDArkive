@@ -44,7 +44,7 @@ struct AlbumDetailView: View {
                 RatingView(rating: .constant(Int(album.rating)))
                     .font(.title)
                 EmojiRatingView(rating: album.rating)
-                    .font(.title)
+                    .font(.largeTitle)
             }
             
             HStack {
