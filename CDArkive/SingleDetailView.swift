@@ -60,5 +60,17 @@ struct SingleDetailView: View {
         }
         .navigationTitle(single.title ?? "Unknown album")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Delete album?", isPresented: $showingSingleDeleteAlert) {
+            Button("Delete", role: .destructive, action: deleteSingle)
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("Are you sure?")
+        }
+    }
+    
+    func deleteSingle() {
+        moc.delete(single)
+        try? moc.save()
+        dismiss()
     }
 }
