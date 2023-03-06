@@ -1,13 +1,14 @@
 //
-//  AddCD.swift
+//  AddAlbum.swift
 //  CDArkive
 //
 //  Created by Mark Strijdom on 06/03/2023.
 //
 
+import CoreData
 import SwiftUI
 
-struct AddCD: View {
+struct AddAlbum: View {
     @Environment(\.managedObjectContext) var moc
     
     @State private var artist = ""
@@ -69,12 +70,13 @@ struct AddCD: View {
                     }
                 }
             }
+            .navigationTitle("Add new Album")
         }
     }
 }
 
-struct AddCD_Previews: PreviewProvider {
+struct AddAlbum_Previews: PreviewProvider {
     static var previews: some View {
-        AddCD()
+        AddAlbum()
     }
 }
