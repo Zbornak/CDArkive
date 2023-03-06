@@ -21,6 +21,8 @@
 		197ECE6B29B62473003C265C /* FormatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE6A29B62473003C265C /* FormatView.swift */; };
 		197ECE6D29B62499003C265C /* GenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE6C29B62499003C265C /* GenreView.swift */; };
 		197ECE6F29B624B6003C265C /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE6E29B624B6003C265C /* LanguageView.swift */; };
+		197ECE7129B63406003C265C /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE7029B63406003C265C /* AlbumDetailView.swift */; };
+		197ECE7329B63416003C265C /* SingleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE7229B63416003C265C /* SingleDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		197ECE6A29B62473003C265C /* FormatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatView.swift; sourceTree = "<group>"; };
 		197ECE6C29B62499003C265C /* GenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreView.swift; sourceTree = "<group>"; };
 		197ECE6E29B624B6003C265C /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
+		197ECE7029B63406003C265C /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
+		197ECE7229B63416003C265C /* SingleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				192CE31729B5F0B60099E0C4 /* CDArkiveApp.swift */,
 				192CE31929B5F0B60099E0C4 /* ContentView.swift */,
 				197ECE6229B6069D003C265C /* SingleView.swift */,
+				197ECE7029B63406003C265C /* AlbumDetailView.swift */,
+				197ECE7229B63416003C265C /* SingleDetailView.swift */,
 				197ECE6629B61825003C265C /* RatingView.swift */,
 				197ECE6829B61ED0003C265C /* EmojiRatingView.swift */,
 				197ECE6A29B62473003C265C /* FormatView.swift */,
@@ -170,8 +176,10 @@
 				192CE31A29B5F0B60099E0C4 /* ContentView.swift in Sources */,
 				197ECE6929B61ED0003C265C /* EmojiRatingView.swift in Sources */,
 				192CE32929B5F61C0099E0C4 /* DataController.swift in Sources */,
+				197ECE7329B63416003C265C /* SingleDetailView.swift in Sources */,
 				192CE32B29B5F9D00099E0C4 /* AddAlbum.swift in Sources */,
 				197ECE6F29B624B6003C265C /* LanguageView.swift in Sources */,
+				197ECE7129B63406003C265C /* AlbumDetailView.swift in Sources */,
 				197ECE6729B61825003C265C /* RatingView.swift in Sources */,
 				192CE32D29B602500099E0C4 /* AddSingle.swift in Sources */,
 				192CE31829B5F0B60099E0C4 /* CDArkiveApp.swift in Sources */,
