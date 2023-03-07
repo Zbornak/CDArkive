@@ -87,6 +87,7 @@ struct AlbumDetailView: View {
                 Label("Delete this album", systemImage: "trash")
             }
         }
+        .background(albumBackgroundColor().opacity(0.3))
     }
     
     func deleteAlbum() {
@@ -95,7 +96,7 @@ struct AlbumDetailView: View {
         dismiss()
     }
     
-    func backgroundColor() -> Color {
+    func albumBackgroundColor() -> Color {
         if album.genre == "Rock" {
             return Color(red: 82 / 255, green: 61.2 / 255, blue: 49 / 255)
         } else if album.genre == "Hip Hop" {
