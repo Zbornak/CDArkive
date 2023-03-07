@@ -41,26 +41,34 @@ struct AlbumDetailView: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
             
-            Text(album.notes ?? "No notes")
-                .padding()
-            
-            HStack {
-                RatingView(rating: .constant(Int(album.rating)))
-                    .font(.title)
-                EmojiRatingView(rating: album.rating)
-                    .font(.largeTitle)
-            }
-            
-            HStack {
-                FormatView(format: album.format ?? "")
-                Text(album.format ?? "Unknown format")
-            }
-            .padding(.top)
+            VStack {
                 
-            HStack {
-                LanguageView(language: album.language ?? "")
-                Text(album.language ?? "Unknown language")
+                Text(album.notes ?? "No notes")
+                    .padding()
+                
+                HStack {
+                    RatingView(rating: .constant(Int(album.rating)))
+                        .font(.title)
+                    EmojiRatingView(rating: album.rating)
+                        .font(.largeTitle)
+                }
+                .padding()
+                
+                HStack {
+                    FormatView(format: album.format ?? "")
+                    Text(album.format ?? "Unknown format")
+                }
+                .padding()
+                
+                HStack {
+                    LanguageView(language: album.language ?? "")
+                    Text(album.language ?? "Unknown language")
+                }
+                .padding()
             }
+            
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke())
         }
         .navigationTitle(album.title ?? "Unknown album")
         .navigationBarTitleDisplayMode(.inline)
