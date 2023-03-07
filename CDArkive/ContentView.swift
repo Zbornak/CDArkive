@@ -14,6 +14,8 @@ struct ContentView: View {
     
     @State private var showingAddAlbumScreen = false
     
+    @State private var albumSearchText = ""
+    
     var body: some View {
         NavigationView {
             List {
@@ -59,6 +61,7 @@ struct ContentView: View {
                 AddAlbum()
             }
         }
+        .searchable(text: $albumSearchText)
     }
     
     func deleteAlbums(at offsets: IndexSet) {

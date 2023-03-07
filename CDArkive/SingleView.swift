@@ -13,6 +13,8 @@ struct SingleView: View {
     
     @State private var showingAddSingleScreen = false
     
+    @State private var singleSearchText = ""
+    
     var body: some View {
         NavigationView {
             List {
@@ -58,6 +60,7 @@ struct SingleView: View {
                     AddSingle()
                 }
         }
+        .searchable(text: $singleSearchText)
     }
     
     func deleteSingles(at offsets: IndexSet) {
