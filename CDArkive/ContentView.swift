@@ -66,7 +66,7 @@ struct ContentView: View {
                 FilteredAlbumListView(filter: albumSearchText)
             }
         }
-        .searchable(text: $albumSearchText, prompt: "Search for artist") {
+        .searchable(text: $albumSearchText) {
             Button("Search") {
                 showingFilteredAlbumListView.toggle()
             }

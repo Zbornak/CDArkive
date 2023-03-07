@@ -8,28 +8,42 @@
 import SwiftUI
 
 struct FilteredAlbumListView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @FetchRequest var fetchRequest: FetchedResults<Album>
     
     var body: some View {
-        List(fetchRequest, id: \.self) { album in
-            NavigationLink {
-                AlbumDetailView(album: album)
-            } label: {
-                HStack {
-                    GenreView(genre: album.genre ?? "Unknown genre")
-                        .font(.largeTitle)
-                    
-                    VStack(alignment: .leading) {
-                        Text(album.title ?? "Unknown title")
-                            .font(.headline)
+        NavigationView {
+            List(fetchRequest, id: \.self) { album in
+                NavigationLink {
+                    AlbumDetailView(album: album)
+                } label: {
+                    HStack {
+                        GenreView(genre: album.genre ?? "Unknown genre")
+                            .font(.largeTitle)
                         
-                        HStack {
-                            Text(album.artist ?? "Unknown artist")
-                                .foregroundColor(.secondary)
+                        VStack(alignment: .leading) {
+                            Text(album.title ?? "Unknown title")
+                                .font(.headline)
                             
-                            FormatView(format: album.format ?? "Unknown format")
+                            HStack {
+                                Text(album.artist ?? "Unknown artist")
+                                    .foregroundColor(.secondary)
+                                
+                                FormatView(format: album.format ?? "Unknown format")
+                            }
                         }
                     }
+                }
+            }
+            .navigationTitle("Search results")
+            .toolbar {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "multiply")
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
                 }
             }
         }
