@@ -78,7 +78,9 @@ struct AddAlbum: View {
                         newAlbum.title = title
                         newAlbum.releaseDate = releaseDate
                         
-                        try? moc.save()
+                        if moc.hasChanges {
+                            try? moc.save()
+                        }
                         dismiss()
                     }
                 }

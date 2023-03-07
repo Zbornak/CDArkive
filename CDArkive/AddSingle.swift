@@ -79,7 +79,9 @@ struct AddSingle: View {
                         newSingle.title = title
                         newSingle.releaseDate = releaseDate
                         
-                        try? moc.save()
+                        if moc.hasChanges {
+                            try? moc.save()
+                        }
                         dismiss()
                     }
                 }
