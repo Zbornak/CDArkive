@@ -13,6 +13,8 @@ struct SingleView: View {
     
     @State private var showingAddSingleScreen = false
     
+    @State private var showingFilteredSingleListView = false
+    
     @State private var singleSearchText = ""
     
     var body: some View {
@@ -59,8 +61,15 @@ struct SingleView: View {
                 .sheet(isPresented: $showingAddSingleScreen) {
                     AddSingle()
                 }
+                .sheet(isPresented: $showingFilteredSingleListView) {
+                    FilteredSingleListView(filter: singleSearchText)
+                }
         }
-        .searchable(text: $singleSearchText)
+        .searchable(text: $singleSearchText) {
+            Button("Search") {
+                showingFilteredSingleListView.toggle()
+            }
+        }
     }
     
     func deleteSingles(at offsets: IndexSet) {
