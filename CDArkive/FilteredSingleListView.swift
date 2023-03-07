@@ -42,7 +42,7 @@ struct FilteredSingleListView: View {
     }
     
     init(filter: String) {
-        _fetchRequest = FetchRequest<Single>(sortDescriptors: [], predicate: NSPredicate(format: "artist BEGINSWITH[c] %@", filter))
+        _fetchRequest = FetchRequest<Single>(sortDescriptors: [], predicate: NSPredicate(format: "artist CONTAINS[c] %@", filter))
     }
 }
 
