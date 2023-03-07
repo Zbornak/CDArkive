@@ -86,6 +86,15 @@ struct AddAlbum: View {
                 }
             }
             .navigationTitle("Add new Album")
+            .toolbar {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "multiply")
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                }
+            }
         }
     }
 }

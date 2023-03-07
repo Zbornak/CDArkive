@@ -87,6 +87,15 @@ struct AddSingle: View {
                 }
             }
             .navigationTitle("Add new Single")
+            .toolbar {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "multiply")
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                }
+            }
         }
     }
 }
