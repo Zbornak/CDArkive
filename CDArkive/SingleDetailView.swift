@@ -42,6 +42,10 @@ struct SingleDetailView: View {
                 .foregroundColor(.secondary)
             
             VStack {
+                Image(systemName: "info.circle")
+                    .padding(.top)
+                    .foregroundColor(.secondary)
+                
                 Text(single.notes ?? "No notes")
                     .padding()
                 
