@@ -47,13 +47,16 @@ struct AlbumDetailView: View {
                     .foregroundColor(.secondary)
                 
                 Text(album.notes ?? "No notes")
+                    .padding(.bottom)
                 
                 HStack {
+                    Text("Format:")
                     FormatView(format: album.format ?? "")
                     Text(album.format ?? "Unknown format")
                 }
                 
                 HStack {
+                    Text("Language:")
                     LanguageView(language: album.language ?? "")
                     Text(album.language ?? "Unknown language")
                 }

@@ -47,13 +47,16 @@ struct SingleDetailView: View {
                     .foregroundColor(.secondary)
                 
                 Text(single.notes ?? "No notes")
+                    .padding(.bottom)
                 
                 HStack {
+                    Text("Format:")
                     FormatView(format: single.format ?? "")
                     Text(single.format ?? "Unknown format")
                 }
                 
                 HStack {
+                    Text("Language:")
                     LanguageView(language: single.language ?? "")
                     Text(single.language ?? "Unknown language")
                 }
