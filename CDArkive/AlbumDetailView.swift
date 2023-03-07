@@ -42,26 +42,27 @@ struct AlbumDetailView: View {
                 .foregroundColor(.secondary)
             
             VStack {
-                Text(album.notes ?? "No notes")
+                Image(systemName: "info.circle")
                     .padding()
+                    .foregroundColor(.secondary)
+                
+                Text(album.notes ?? "No notes")
+                
+                HStack {
+                    FormatView(format: album.format ?? "")
+                    Text(album.format ?? "Unknown format")
+                }
+                
+                HStack {
+                    LanguageView(language: album.language ?? "")
+                    Text(album.language ?? "Unknown language")
+                }
                 
                 HStack {
                     RatingView(rating: .constant(Int(album.rating)))
                         .font(.title)
                     EmojiRatingView(rating: album.rating)
                         .font(.largeTitle)
-                }
-                .padding()
-                
-                HStack {
-                    FormatView(format: album.format ?? "")
-                    Text(album.format ?? "Unknown format")
-                }
-                .padding()
-                
-                HStack {
-                    LanguageView(language: album.language ?? "")
-                    Text(album.language ?? "Unknown language")
                 }
                 .padding()
             }

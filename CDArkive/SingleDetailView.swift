@@ -43,29 +43,26 @@ struct SingleDetailView: View {
             
             VStack {
                 Image(systemName: "info.circle")
-                    .padding(.top)
+                    .padding()
                     .foregroundColor(.secondary)
                 
                 Text(single.notes ?? "No notes")
-                    .padding()
+                
+                HStack {
+                    FormatView(format: single.format ?? "")
+                    Text(single.format ?? "Unknown format")
+                }
+                
+                HStack {
+                    LanguageView(language: single.language ?? "")
+                    Text(single.language ?? "Unknown language")
+                }
                 
                 HStack {
                     RatingView(rating: .constant(Int(single.rating)))
                         .font(.title)
                     EmojiRatingView(rating: single.rating)
                         .font(.largeTitle)
-                }
-                .padding()
-                
-                HStack {
-                    FormatView(format: single.format ?? "")
-                    Text(single.format ?? "Unknown format")
-                }
-                .padding()
-                
-                HStack {
-                    LanguageView(language: single.language ?? "")
-                    Text(single.language ?? "Unknown language")
                 }
                 .padding()
             }
