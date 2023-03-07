@@ -69,6 +69,7 @@ struct AlbumDetailView: View {
                 }
                 .padding()
             }
+            .background(albumBackgroundColor().opacity(0.1))
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .overlay(RoundedRectangle(cornerRadius: 10).stroke())
         }

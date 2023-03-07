@@ -69,6 +69,7 @@ struct SingleDetailView: View {
                 }
                 .padding()
             }
+            .background(singleBackgroundColor().opacity(0.1))
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .overlay(RoundedRectangle(cornerRadius: 10).stroke())
         }
