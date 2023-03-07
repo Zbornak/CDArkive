@@ -15,16 +15,20 @@ struct FilteredSingleListView: View {
     var body: some View {
         NavigationView {
             List(fetchRequest, id: \.self) { single in
-                HStack {
-                    GenreView(genre: single.genre ?? "Unknown genre")
-                        .font(.largeTitle)
+                NavigationLink {
+                    SingleDetailView(single: single)
+                } label: {
+                    HStack {
+                        GenreView(genre: single.genre ?? "Unknown genre")
+                            .font(.largeTitle)
                         
-                    VStack(alignment: .leading) {
-                        Text(single.title ?? "Unknown title")
-                            .font(.headline)
+                        VStack(alignment: .leading) {
+                            Text(single.title ?? "Unknown title")
+                                .font(.headline)
                             
-                        Text(single.artist ?? "Unknown artist")
-                            .foregroundColor(.secondary)
+                            Text(single.artist ?? "Unknown artist")
+                                .foregroundColor(.secondary)
+                        }
                     }
                 }
             }
