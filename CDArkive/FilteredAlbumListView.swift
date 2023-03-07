@@ -23,12 +23,8 @@ struct FilteredAlbumListView: View {
                         Text(album.title ?? "Unknown title")
                             .font(.headline)
                             
-                        HStack {
-                            Text(album.artist ?? "Unknown artist")
-                                .foregroundColor(.secondary)
-                                
-                            FormatView(format: album.format ?? "Unknown format")
-                        }
+                        Text(album.artist ?? "Unknown artist")
+                            .foregroundColor(.secondary)
                     }
                 }
             }

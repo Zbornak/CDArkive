@@ -23,12 +23,8 @@ struct FilteredSingleListView: View {
                         Text(single.title ?? "Unknown title")
                             .font(.headline)
                             
-                        HStack {
-                            Text(single.artist ?? "Unknown artist")
-                                .foregroundColor(.secondary)
-                                
-                            FormatView(format: single.format ?? "Unknown format")
-                        }
+                        Text(single.artist ?? "Unknown artist")
+                            .foregroundColor(.secondary)
                     }
                 }
             }
