@@ -19,6 +19,7 @@ struct AddSingle: View {
     @State private var language = "English"
     @State private var notes = ""
     @State private var rating = 3
+    @State private var releaseDate = Date.now
     @State private var title = ""
     
     let formats = ["CD", "SACD", "Blu-Spec CD", "DVD Audio", "Vinyl", "Cassette", "Minidisc", "Reel"]
@@ -31,6 +32,11 @@ struct AddSingle: View {
                 Section {
                     TextField("Single title", text: $title)
                     TextField("Artist name", text: $artist)
+                    VStack {
+                        DatePicker(selection: $releaseDate, in: ...Date.now, displayedComponents: .date) {
+                            Text("Release date")
+                        }
+                    }
                     
                     Picker("Genre", selection: $genre) {
                         ForEach(genres, id: \.self) {
@@ -71,6 +77,7 @@ struct AddSingle: View {
                         newSingle.notes = notes
                         newSingle.rating = Int16(rating)
                         newSingle.title = title
+                        newSingle.releaseDate = releaseDate
                         
                         try? moc.save()
                         dismiss()

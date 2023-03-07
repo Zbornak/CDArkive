@@ -37,6 +37,10 @@ struct SingleDetailView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.secondary)
             
+            Text(single.releaseDate?.formatted(date: .long, time: .omitted) ?? "Unknown date")
+                .font(.caption)
+                .foregroundColor(.secondary)
+            
             Text(single.notes ?? "No notes")
                 .padding()
             
@@ -60,7 +64,7 @@ struct SingleDetailView: View {
         }
         .navigationTitle(single.title ?? "Unknown album")
         .navigationBarTitleDisplayMode(.inline)
-        .alert("Delete album?", isPresented: $showingSingleDeleteAlert) {
+        .alert("Delete single?", isPresented: $showingSingleDeleteAlert) {
             Button("Delete", role: .destructive, action: deleteSingle)
             Button("Cancel", role: .cancel) {}
         } message: {
