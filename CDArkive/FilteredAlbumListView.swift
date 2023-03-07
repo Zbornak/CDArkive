@@ -42,6 +42,6 @@ struct FilteredAlbumListView: View {
     }
     
     init(filter: String) {
-        _fetchRequest = FetchRequest<Album>(sortDescriptors: [], predicate: NSPredicate(format: "artist BEGINSWITH[c] %@", filter))
+        _fetchRequest = FetchRequest<Album>(sortDescriptors: [], predicate: NSPredicate(format: "artist CONTAINS[c] %@", filter))
     }
 }
