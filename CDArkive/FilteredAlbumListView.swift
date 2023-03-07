@@ -15,23 +15,19 @@ struct FilteredAlbumListView: View {
     var body: some View {
         NavigationView {
             List(fetchRequest, id: \.self) { album in
-                NavigationLink {
-                    AlbumDetailView(album: album)
-                } label: {
-                    HStack {
-                        GenreView(genre: album.genre ?? "Unknown genre")
-                            .font(.largeTitle)
+                HStack {
+                    GenreView(genre: album.genre ?? "Unknown genre")
+                        .font(.largeTitle)
                         
-                        VStack(alignment: .leading) {
-                            Text(album.title ?? "Unknown title")
-                                .font(.headline)
+                    VStack(alignment: .leading) {
+                        Text(album.title ?? "Unknown title")
+                            .font(.headline)
                             
-                            HStack {
-                                Text(album.artist ?? "Unknown artist")
-                                    .foregroundColor(.secondary)
+                        HStack {
+                            Text(album.artist ?? "Unknown artist")
+                                .foregroundColor(.secondary)
                                 
-                                FormatView(format: album.format ?? "Unknown format")
-                            }
+                            FormatView(format: album.format ?? "Unknown format")
                         }
                     }
                 }
