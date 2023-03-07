@@ -65,7 +65,7 @@ struct SingleView: View {
                     FilteredSingleListView(filter: singleSearchText)
                 }
         }
-        .searchable(text: $singleSearchText) {
+        .searchable(text: $singleSearchText, prompt: "Search artists") {
             Button("Search") {
                 showingFilteredSingleListView.toggle()
             }
