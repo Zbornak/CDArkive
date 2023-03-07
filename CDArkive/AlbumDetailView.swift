@@ -42,7 +42,6 @@ struct AlbumDetailView: View {
                 .foregroundColor(.secondary)
             
             VStack {
-                
                 Text(album.notes ?? "No notes")
                     .padding()
                 
@@ -66,7 +65,6 @@ struct AlbumDetailView: View {
                 }
                 .padding()
             }
-            
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .overlay(RoundedRectangle(cornerRadius: 10).stroke())
         }
