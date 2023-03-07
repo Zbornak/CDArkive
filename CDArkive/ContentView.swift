@@ -14,6 +14,8 @@ struct ContentView: View {
     
     @State private var showingAddAlbumScreen = false
     
+    @State private var showingFilteredAlbumListView = false
+    
     @State private var albumSearchText = ""
     
     var body: some View {
@@ -60,8 +62,15 @@ struct ContentView: View {
             .sheet(isPresented: $showingAddAlbumScreen) {
                 AddAlbum()
             }
+            .sheet(isPresented: $showingFilteredAlbumListView) {
+                FilteredAlbumListView(filter: albumSearchText)
+            }
         }
-        .searchable(text: $albumSearchText)
+        .searchable(text: $albumSearchText, prompt: "Search for artist") {
+            Button("Search") {
+                showingFilteredAlbumListView.toggle()
+            }
+        }
     }
     
     func deleteAlbums(at offsets: IndexSet) {

@@ -15,6 +15,7 @@
 		192CE32929B5F61C0099E0C4 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CE32829B5F61C0099E0C4 /* DataController.swift */; };
 		192CE32B29B5F9D00099E0C4 /* AddAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CE32A29B5F9D00099E0C4 /* AddAlbum.swift */; };
 		192CE32D29B602500099E0C4 /* AddSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192CE32C29B602500099E0C4 /* AddSingle.swift */; };
+		193D37E229B7863B007920BA /* FilteredAlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193D37E129B7863B007920BA /* FilteredAlbumListView.swift */; };
 		197ECE6329B6069D003C265C /* SingleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE6229B6069D003C265C /* SingleView.swift */; };
 		197ECE6729B61825003C265C /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE6629B61825003C265C /* RatingView.swift */; };
 		197ECE6929B61ED0003C265C /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197ECE6829B61ED0003C265C /* EmojiRatingView.swift */; };
@@ -35,6 +36,7 @@
 		192CE32829B5F61C0099E0C4 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		192CE32A29B5F9D00099E0C4 /* AddAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbum.swift; sourceTree = "<group>"; };
 		192CE32C29B602500099E0C4 /* AddSingle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSingle.swift; sourceTree = "<group>"; };
+		193D37E129B7863B007920BA /* FilteredAlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredAlbumListView.swift; sourceTree = "<group>"; };
 		197ECE6229B6069D003C265C /* SingleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleView.swift; sourceTree = "<group>"; };
 		197ECE6629B61825003C265C /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		197ECE6829B61ED0003C265C /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				197ECE6A29B62473003C265C /* FormatView.swift */,
 				197ECE6C29B62499003C265C /* GenreView.swift */,
 				197ECE6E29B624B6003C265C /* LanguageView.swift */,
+				193D37E129B7863B007920BA /* FilteredAlbumListView.swift */,
 				192CE32829B5F61C0099E0C4 /* DataController.swift */,
 				192CE32529B5F5AD0099E0C4 /* CDArkive.xcdatamodeld */,
 				192CE32A29B5F9D00099E0C4 /* AddAlbum.swift */,
@@ -178,6 +181,7 @@
 				192CE32929B5F61C0099E0C4 /* DataController.swift in Sources */,
 				197ECE7329B63416003C265C /* SingleDetailView.swift in Sources */,
 				192CE32B29B5F9D00099E0C4 /* AddAlbum.swift in Sources */,
+				193D37E229B7863B007920BA /* FilteredAlbumListView.swift in Sources */,
 				197ECE6F29B624B6003C265C /* LanguageView.swift in Sources */,
 				197ECE7129B63406003C265C /* AlbumDetailView.swift in Sources */,
 				197ECE6729B61825003C265C /* RatingView.swift in Sources */,
