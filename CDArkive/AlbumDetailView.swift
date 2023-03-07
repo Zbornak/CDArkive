@@ -32,9 +32,13 @@ struct AlbumDetailView: View {
                     .offset(x: -5, y: -5)
             }
             
-            Text(album.artist ?? "Unkown artist")
+            Text(album.artist ?? "Unknown artist")
                 .font(.title)
                 .fontWeight(.bold)
+                .foregroundColor(.secondary)
+            
+            Text(album.releaseDate?.formatted(date: .long, time: .omitted) ?? "Unknown date")
+                .font(.caption)
                 .foregroundColor(.secondary)
             
             Text(album.notes ?? "No notes")
