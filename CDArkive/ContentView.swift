@@ -79,7 +79,9 @@ struct ContentView: View {
             moc.delete(album)
         }
         
-        try? moc.save()
+        if moc.hasChanges {
+            try? moc.save()
+        }
     }
 }
 

@@ -78,7 +78,9 @@ struct SingleView: View {
             moc.delete(single)
         }
         
-        try? moc.save()
+        if moc.hasChanges {
+            try? moc.save()
+        }
     }
 }
 
